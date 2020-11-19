@@ -37,11 +37,11 @@
       "name": "grafana-builder",
       "source": {
         "git": {
-          "remote": "https://github.com/kausalco/public",
+          "remote": "https://github.com/thpham/jsonnet-libs",
           "subdir": "grafana-builder"
         }
       },
-      "version": "e6fe81715dd802b4c9d9c64f2c44ba6ee56d2000",
+      "version": "04cdb1b968b19be15013a51f3e39bc6df40db5e2",
       "sum": "EhlVigsUzSKHDKQ0GPYVz2T3t6EwOHyuytuDTgOM1Iw="
     },
     {

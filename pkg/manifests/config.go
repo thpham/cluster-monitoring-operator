@@ -44,18 +44,18 @@ type HTTPConfig struct {
 
 type PrometheusOperatorConfig struct {
 	BaseImage                   string            `json:"baseImage"`
-	Tag                         string            `json:"-"`
+	Tag                         string            `json:"imageTag"`
 	PrometheusConfigReloader    string            `json:"prometheusConfigReloaderBaseImage"`
-	PrometheusConfigReloaderTag string            `json:"-"`
+	PrometheusConfigReloaderTag string            `json:"prometheusConfigReloaderImageTag"`
 	ConfigReloaderImage         string            `json:"configReloaderBaseImage"`
-	ConfigReloaderTag           string            `json:"-"`
+	ConfigReloaderTag           string            `json:"configReloaderImageTag"`
 	NodeSelector                map[string]string `json:"nodeSelector"`
 }
 
 type PrometheusK8sConfig struct {
 	Retention           string                    `json:"retention"`
 	BaseImage           string                    `json:"baseImage"`
-	Tag                 string                    `json:"-"`
+	Tag                 string                    `json:"imageTag"`
 	NodeSelector        map[string]string         `json:"nodeSelector"`
 	Resources           *v1.ResourceRequirements  `json:"resources"`
 	ExternalLabels      map[string]string         `json:"externalLabels"`
@@ -66,7 +66,7 @@ type PrometheusK8sConfig struct {
 
 type AlertmanagerMainConfig struct {
 	BaseImage           string                    `json:"baseImage"`
-	Tag                 string                    `json:"-"`
+	Tag                 string                    `json:"imageTag"`
 	NodeSelector        map[string]string         `json:"nodeSelector"`
 	Resources           *v1.ResourceRequirements  `json:"resources"`
 	VolumeClaimTemplate *v1.PersistentVolumeClaim `json:"volumeClaimTemplate"`
@@ -75,30 +75,30 @@ type AlertmanagerMainConfig struct {
 
 type GrafanaConfig struct {
 	BaseImage    string            `json:"baseImage"`
-	Tag          string            `json:"-"`
+	Tag          string            `json:"imageTag"`
 	NodeSelector map[string]string `json:"nodeSelector"`
 	Hostport     string            `json:"hostport"`
 }
 
 type AuthConfig struct {
 	BaseImage string `json:"baseImage"`
-	Tag       string `json:"-"`
+	Tag       string `json:"imageTag"`
 }
 
 type NodeExporterConfig struct {
 	BaseImage string `json:"baseImage"`
-	Tag       string `json:"-"`
+	Tag       string `json:"imageTag"`
 }
 
 type KubeStateMetricsConfig struct {
 	BaseImage    string            `json:"baseImage"`
-	Tag          string            `json:"-"`
+	Tag          string            `json:"imageTag"`
 	NodeSelector map[string]string `json:"nodeSelector"`
 }
 
 type KubeRbacProxyConfig struct {
 	BaseImage string `json:"baseImage"`
-	Tag       string `json:"-"`
+	Tag       string `json:"imageTag"`
 }
 
 type EtcdConfig struct {
